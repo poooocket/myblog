@@ -1,0 +1,8 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Hi，我是蔡克梅'
+theme = "minimal"
+
+
+[Params]
+    selfIntroduciton = '一名热爱数据和AI的产品设计师。这里记录着我的工作、思考和成长，也分享一些我喜欢的书籍及见闻。希望我的文字能带给你启发和共鸣，感谢你的到访，期待与你一起交流！'
