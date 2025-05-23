@@ -8,7 +8,7 @@ draft = false
 +++
 
 
-![cover.png](/guguji/cover.png)
+![img](cover.png)
 
 最近迷上了一档名为 All-In with Chamath, Jason, Sacks & Friedberg的播客节目，节目邀请行业资深人士，围绕经济、政治、科技、社会等多方面话题展开深度探讨。每期播客时长都超过一小时，对我来说既是享受，也是挑战。很多地方我听不太懂，尤其是俚语和玩笑部分。为了更好地理解播客内容，我希望能将播客转写成文本。
 
@@ -18,11 +18,11 @@ draft = false
 
 
 
-![reserch.png](/guguji/1.png)
-![reserch.png](/guguji/2.png)
-![reserch.png](/guguji/3.png)
-![reserch.png](/guguji/4.png)
-![reserch.png](/guguji/5.png)
+![img](1.png)
+![img](2.png)
+![img](3.png)
+![img](4.png)
+![img](5.png)
 
 
 
@@ -100,7 +100,7 @@ SenseVoice-Small最快，但转写结果没有时间戳；FasterWhisper在mac机
     
     其完整的说话人分离管道 pyannote/speaker-diarization-3.1 包含上述模块，并集成成一条高精度的推理流程：
     
-    ![图片](/guguji/6.png)
+    ![img](6.png)
     
     该管道在实际测试中表现稳定、易于使用，社区活跃，支持本地部署，适合播客这类多说话人的语音内容。
     
@@ -246,7 +246,7 @@ LangChain 提供了 `load_summarize_chain` 方法，用于构建摘要链，目�
 
 使用播客《Fixing the American Dream with Andrew Schulz》的转写文本，在摘要任务上对比几个了最近发布的开源模型：`Gemma 3（1B、4B、12B、27B）`，`Deepseek-R1:7B`**，**`qwq:32B` 
 
-![图片](/guguji/7.png)
+![img](7.png)
 
 
 在本轮摘要任务中，模型表现如下：
@@ -273,7 +273,7 @@ LangChain 提供了 `load_summarize_chain` 方法，用于构建摘要链，目�
 
 将全部转写文本进行嵌入，并存入向量数据库。将每条 shownote作为 query 发起语义检索，获取相关文本片段；再使用 LLM 基于 shownote 与检索内容进行问答。
 
-![图片](/guguji/8.png)
+![img](8.png)
 
 方法一按时间顺序组织内容，结构清晰，易于阅读，且可与摘要链共用分段摘要，处理效率高。
 
@@ -297,7 +297,7 @@ LangChain 提供了 `load_summarize_chain` 方法，用于构建摘要链，目�
 
 ### **流程图**
 
-![图片](/guguji/12.png)
+![img](12.png)
 
 ### **名称和Logo**
 
@@ -305,15 +305,15 @@ LangChain 提供了 `load_summarize_chain` 方法，用于构建摘要链，目�
 
 **Logo：** 结合钢笔、小鸡脑袋和声波的形状，用Figma简单绘制了个Logo。
 
-![图片](/guguji/11.png)
+![img](11.png)
 
 ### **交互原型**
 
-![图片](/guguji/9.png)
+![img](9.png)
 
 ### 最终Demo
 
-[Demo](/guguji/guguji.mp4)
+[demo.mp4](demo.mp4)
 
 ### **功能扩展计划**
 - 实现音频与文本的双向联动跳转（点击文本定位音频 & 音频定位文本）

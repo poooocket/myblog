@@ -7,16 +7,18 @@ date = 2022-05-30T10:59:58+08:00
 draft = false
 +++
 
-![image.png](/ota/cover.png)
+![img](cover.png)
+
+
 随着智能汽车技术的发展，OTA（Over-The-Air）远程升级已成为车企提升产品迭代效率与用户体验的关键手段。用户对升级的关注，正从以往的“技术可行性”转向“体验友好性”，对提示的清晰度、操作的便捷性以及升级结果的可感知性提出了更高要求。
 
 本项目围绕整车OTA升级流程，系统梳理了平台端、车机端和手机端的核心功能和关键体验，从零到一系统性构建了覆盖平台端、车机端与手机端的OTA体验闭环。
 
 **业务链路调研**
 
-![image.png](/ota/upgrade_process_overview.png)
+![img](upgrade_process_overview.png)
 
-![image.png](/ota/bussiness_flow.png)
+![img](bussiness_flow.png)
 
 **平台端**
 
@@ -26,19 +28,19 @@ draft = false
 
 设计目标：降低配置复杂度，提升任务创建效率；支持升级策略的模块化与复用，提升操作便捷性；提供清晰的任务监控数据可视化界面。
 
-![image.png](/ota/competitive_analysis_ota_task_creation.png)
+![img](competitive_analysis_ota_task_creation.png)
 
-![image.png](/ota/key_features.png)
+![img](key_features.png)
 
-![image.png](/ota/info_structure.png)
+![img](info_structure.png)
 
-![image.png](/ota/infro_frame.png)
+![img](infro_frame.png)
 
-![image.png](/ota/interactive_design.png)
+![img](interactive_design.png)
 
-![image.png](/ota/operations_monitoring.png)
+![img](operations_monitoring.png)
 
-![image.png](/ota/mobile_daily_report.png)
+![img](mobile_daily_report.png)
 **车机端**
 
 用户角色：车主或驾驶员。
@@ -47,9 +49,9 @@ draft = false
 
 设计目标：提升OTA提示的可感知性；提供便捷的预约升级入口，使升级不打扰日常用车；提供清晰的升级状态反馈，减少用户对升级过程的不确定和焦虑。
 
-![image.png](/ota/competitive_analysis_hmi_app.png)
+![img](competitive_analysis_hmi_app.png)
 
-![image.png](/ota/hmi_design.png)
+![img](hmi_design.png)
 
 **手机端**
 
@@ -59,7 +61,7 @@ draft = false
 
 设计目标：升级通知推送；车控页面增加OTA状态组件，可实时查看升级状态，提升信息透明度；支持版本变更信息查看、升级预约、远程升级操作。
 
-![image.png](/ota/app_design.png)
+![image.png](/app_design.png)
 
 **总结**
 

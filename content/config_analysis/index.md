@@ -7,7 +7,7 @@ date = 2023-10-30T10:59:58+08:00
 draft = false
 +++
 
-![image.png](/config_analysis/cover.png)
+![image.png](cover.png)
 
 ## 背景
 
@@ -78,7 +78,7 @@ draft = false
 - **品牌-车型层级结构：**通过旭日图展示厂商与旗下车型的从属关系，便于观察品牌布局及深度。
 - **图表交互联动：** 图表支持点击筛选功能，可直接过滤下方列表数据，快速聚焦感兴趣的品牌、车型或价格区间。
 
-![截屏2025-05-07 12.26.38.png](/config_analysis/%E6%88%AA%E5%B1%8F2025-05-07_12.26.38.png)
+![图](data_overview.png)
 
 **数据分布**
 
@@ -88,7 +88,7 @@ draft = false
 - 图表自动计算并标注缺失值比例，辅助识别数据质量问题。
 - 柱状图支持点击筛选操作，联动更新数据列表，实现按字段值的快速定位与聚焦。
 
-![截屏2025-05-07 12.17.54.png](/config_analysis/%E6%88%AA%E5%B1%8F2025-05-07_12.17.54.png)
+![图](data_distribution.png)
 
 ### **趋势提取与选型对比**
 
@@ -98,7 +98,7 @@ draft = false
 
 与业务方沟通，确定核心关注点为 配置演进趋势与品牌选型差异**，**据此筛选出相关配置字段，聚焦辅助驾驶、感知硬件、座舱交互等模块。
 
-![Slide 16_9 - 14.png](/config_analysis/Slide_16_9_-_14.png)
+![图](analysis_target.png)
 
 **数据处理**
 
@@ -125,7 +125,7 @@ draft = false
 - **交互联动**：点击折线图或柱状图中的任意项后，实时刷新桑基图数据，实现面向年款、价格区间的配置对比分析。
 
 ## DEMO
-[config_output.mp4](/config_analysis/config_output.mp4)
+[demo](demo.mp4)
 
 ## 总结
 
