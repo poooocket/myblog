@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ .Site.Title }}</title>
+  <style>
+    body {
+        background-color: #F8F9FE;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        max-width: 720px;
+        width: 100%;
+    }
+
+    h1 {
+        text-align: left;
+        color: #333;
+        margin-top: 8rem;
+    }
+
+    .self-intro {
+        color: #777;
+        margin-bottom: 4rem;
+        text-align: left;
+        line-height: 1.6; 
+        
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
+        display: flex;
+        align-items: flex-start;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 24px;
+        color: #333;
+    }
+    .summary {
+        margin-top: 0.5rem;
+        color: #777;
+        line-height: 1.6; 
+    }
+    time {
+        display: block;
+        margin-bottom: 1rem;
+        color: #777;
+        font-size: 0.85rem;
+    }
+    .image {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+    .text {
+        flex-grow: 1;
+    }
+    .stack {
+        margin-top: 0.5rem;
+    }
+    .tag {
+        display: inline-block;
+        background-color: #EEF1FF;
+        color: #526FFE;
+        font-size: 0.85rem;
+        font-weight: light;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+  </style>
+
+
+</head>
+<body>
+  <div class="container">
+    <h1>{{ .Site.Title }}</h1>
+    <p class="self-intro">{{ .Site.Params.selfIntroduciton }}</p>
+    <ul>
+      {{ range .Site.RegularPages }}
+        <li>
+            {{ $img := "" }}
+            {{ $re := findRE "<img.*?src=[\"'](.*?)[\"']" .RawContent 1 }}
+            {{ if gt (len $re) 0 }}
+            {{ $img = index (index $re 0) 1 }} 
+            {{ end }}
+
+            {{ if ne $img "" }}
+                <img src="{{ $img }}" alt="封面图" class="image" />
+            {{ end }}
+          <div class="text">
+            <time>{{ .Date.Format "2006-01-02" }}</time>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <div class="summary">{{ .Params.info | plainify | truncate 80 }}</div>
+            <div class="stack">{{ range .Params.stack }}<span class="tag">{{ . }}</span>{{ end }}</div>
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</body>
+</html>
+

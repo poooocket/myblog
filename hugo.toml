@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://poooocket.github.io/myblog/'
 languageCode = 'en-us'
 title = 'Hi，我是蔡克梅'
 theme = "minimal"

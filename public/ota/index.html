@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>整车OTA全链路体验设计（平台端 × 车机端 × 手机端）</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #F8F9FE;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 680px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 1rem;
+      color: #000;
+    }
+    time {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    article {
+      line-height: 1.7;
+    }
+    img, video, audio {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background-color: #eee;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 6px;
+    }
+    code {
+      font-family: Consolas, Monaco, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <article>
+      <h1>整车OTA全链路体验设计（平台端 × 车机端 × 手机端）</h1>
+      <p><time>2022-05-30</time></p>
+
+      <p><img src="/ota/cover.png" alt="image.png">
+随着智能汽车技术的发展，OTA（Over-The-Air）远程升级已成为车企提升产品迭代效率与用户体验的关键手段。用户对升级的关注，正从以往的“技术可行性”转向“体验友好性”，对提示的清晰度、操作的便捷性以及升级结果的可感知性提出了更高要求。</p>
+<p>本项目围绕整车OTA升级流程，系统梳理了平台端、车机端和手机端的核心功能和关键体验，从零到一系统性构建了覆盖平台端、车机端与手机端的OTA体验闭环。</p>
+<p><strong>业务链路调研</strong></p>
+<p><img src="/ota/upgrade_process_overview.png" alt="image.png"></p>
+<p><img src="/ota/bussiness_flow.png" alt="image.png"></p>
+<p><strong>平台端</strong></p>
+<p>用户角色：运营人员、产品经理、技术支持等。</p>
+<p>核心任务：创建整车版本基线（零件模块版本软件组合）；创建OTA升级任务；配置升级策略（目标基线、出发前置条件等）；监控升级执行状态，快速定位失败任务与问题车辆。</p>
+<p>设计目标：降低配置复杂度，提升任务创建效率；支持升级策略的模块化与复用，提升操作便捷性；提供清晰的任务监控数据可视化界面。</p>
+<p><img src="/ota/competitive_analysis_ota_task_creation.png" alt="image.png"></p>
+<p><img src="/ota/key_features.png" alt="image.png"></p>
+<p><img src="/ota/info_structure.png" alt="image.png"></p>
+<p><img src="/ota/infro_frame.png" alt="image.png"></p>
+<p><img src="/ota/interactive_design.png" alt="image.png"></p>
+<p><img src="/ota/operations_monitoring.png" alt="image.png"></p>
+<p><img src="/ota/mobile_daily_report.png" alt="image.png">
+<strong>车机端</strong></p>
+<p>用户角色：车主或驾驶员。</p>
+<p>使用场景：收到升级提示；查看版本变更信息；在确保不影响日常用车的前提下，决定是否立即升级或预约；升级过程中了解当前进度和系统状态。</p>
+<p>设计目标：提升OTA提示的可感知性；提供便捷的预约升级入口，使升级不打扰日常用车；提供清晰的升级状态反馈，减少用户对升级过程的不确定和焦虑。</p>
+<p><img src="/ota/competitive_analysis_hmi_app.png" alt="image.png"></p>
+<p><img src="/ota/hmi_design.png" alt="image.png"></p>
+<p><strong>手机端</strong></p>
+<p>用户角色：车主，通过App远程了解/控制车辆升级状态。</p>
+<p>使用场景：收到OTA推送通知；在App中查看车辆当前版本与升级内容；设置升级时间或远程触发升级；查看升级状态反馈。</p>
+<p>设计目标：升级通知推送；车控页面增加OTA状态组件，可实时查看升级状态，提升信息透明度；支持版本变更信息查看、升级预约、远程升级操作。</p>
+<p><img src="/ota/app_design.png" alt="image.png"></p>
+<p><strong>总结</strong></p>
+<p>本次OTA体验设计项目聚焦于“平台端—车机端—手机端”三大核心触点，分别面向企业运营人员与终端用户的不同需求，系统性梳理并优化了各端关键流程与交互节点。平台端强调任务配置的效率与过程可控性，车机端与手机端则聚焦于升级流程的可感知性、易用性与用户信任感，最终构建出一套逻辑闭环、协同统一的OTA体验体系。</p>
+<p>同时在设计过程中构建了统一的设计语言与组件体系，既提升了跨端体验一致性与交付效率，也为云平台的多业务扩展提供了可持续、可复用的设计基础。</p>
+
+    </article>
+  </div>
+</body>
+</html>
