@@ -61,7 +61,7 @@ draft = false
 
 设计目标：升级通知推送；车控页面增加OTA状态组件，可实时查看升级状态，提升信息透明度；支持版本变更信息查看、升级预约、远程升级操作。
 
-![image.png](/app_design.png)
+![image.png](app_design.png)
 
 **总结**
 
